@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Contact List</title>
+</head>
+<style>
+    /* public/styles.css */
+table {
+
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 4px 4px 16px black;
+  border-collapse: collapse;
+  border: 3px solid #292626;
+}
+
+th, td {
+ margin: 2px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color:orangered;
+  color: white;
+}
+h1{
+  text-align: center;
+  color: navy
+}
+</style>
+<body>
+  <h1>Data Collected From Contact Form</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+     </tr>
+    <% contacts.forEach(contact => { %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.message %></td>
+    
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+
+</body>
+</html>
