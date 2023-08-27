@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Contact Form</title>
+</head>
+<style>
+  body{
+    background-color: aliceblue;
+  }
+  .one{
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px black;
+    width: 50%;
+    height: 90vh;
+    background-color: white;
+  }
+  h1{
+    text-align: center;
+    padding: 16px;
+  }
+  label{
+    padding: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: navy;
+    font-size: medium;
+  }
+  input{
+    padding: 16px;
+    margin: 16px;
+    width: 90%;
+    border: 2px solid navy;
+    border-radius: 12px;
+  }
+  textarea{
+    padding: 10px;
+    margin: 16px;
+    width: 92%;
+    border: 2px solid navy;
+    border-radius: 12px;
+  }
+  button{
+    background-color: navy;
+    color: whitesmoke;
+    width: 97%;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px;
+  }
+  span{
+   text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(11, 247, 7, 0.775);
+  }
+</style>
+<body>
+ <div class="one">
+
+ 
+  <h1>Contact Us</h1>
+ <span>
+
+ <% if (submitted) { %>
+    <p class="success-msg">Form submitted!</p>
+  <% } %> </span>
+  <form action="/" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
+
+</body>
+</html>
